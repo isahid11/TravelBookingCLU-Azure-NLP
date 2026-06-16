@@ -1,0 +1,37 @@
+[
+  {
+    "utterance": "Book a flight to Delhi tomorrow",
+    "expected_intent": "BookFlight",
+    "expected_entities": [
+      { "category": "Destination", "text": "Delhi" },
+      { "category": "TravelDate", "text": "tomorrow" }
+    ]
+  },
+  {
+    "utterance": "I want to travel to Mumbai next week",
+    "expected_intent": "SearchFlights",
+    "expected_entities": [
+      { "category": "Destination", "text": "Mumbai" },
+      { "category": "TravelDate", "text": "next week" }
+    ]
+  },
+  {
+    "utterance": "Cancel my booking",
+    "expected_intent": "CancelBooking",
+    "expected_entities": []
+  },
+  {
+    "utterance": "Find me flights to Bangalore for 2 passengers",
+    "expected_intent": "SearchFlights",
+    "expected_entities": [
+      { "category": "Destination", "text": "Bangalore" },
+      { "category": "PassengerCount", "text": "2" }
+    ]
+  },
+  {
+    "utterance": "What's the weather like in Goa?",
+    "expected_intent": "None",
+    "expected_entities": [],
+    "note": "Out-of-scope query — should fall back to None intent"
+  }
+]

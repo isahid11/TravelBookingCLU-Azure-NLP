@@ -1,0 +1,93 @@
+{
+    "projectFileVersion": "2025-05-15-preview",
+    "stringIndexType": "Utf16CodeUnit",
+    "metadata": {
+        "projectKind": "Conversation",
+        "settings": {
+            "confidenceThreshold": 0,
+            "normalizeCasing": false,
+            "augmentDiacritics": false
+        },
+        "projectName": "TravelBookingCLU",
+        "multilingual": false,
+        "description": "",
+        "language": "en-us"
+    },
+    "assets": {
+        "projectKind": "Conversation",
+        "intents": [
+            {
+                "category": "None",
+                "description": "Used when the user's input doesn't match any known intent or is out of scope."
+            },
+            {
+                "category": "BookFlight"
+            },
+            {
+                "category": "SearchFlights"
+            },
+            {
+                "category": "CancelBooking"
+            }
+        ],
+        "entities": [
+            {
+                "category": "Destination",
+                "compositionSetting": "combineComponents"
+            },
+            {
+                "category": "TravelDate",
+                "compositionSetting": "combineComponents"
+            },
+            {
+                "category": "PassengerCount",
+                "compositionSetting": "combineComponents"
+            }
+        ],
+        "utterances": [
+            {
+                "text": "Cancel my booking",
+                "language": "en-us",
+                "intent": "CancelBooking",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": "I want to travel to Mumbai next week",
+                "language": "en-us",
+                "intent": "SearchFlights",
+                "entities": [
+                    {
+                        "category": "Destination",
+                        "offset": 20,
+                        "length": 6
+                    },
+                    {
+                        "category": "TravelDate",
+                        "offset": 27,
+                        "length": 9
+                    }
+                ],
+                "dataset": "Train"
+            },
+            {
+                "text": "Book a flight to Delhi tomorrow",
+                "language": "en-us",
+                "intent": "BookFlight",
+                "entities": [
+                    {
+                        "category": "Destination",
+                        "offset": 17,
+                        "length": 5
+                    },
+                    {
+                        "category": "TravelDate",
+                        "offset": 23,
+                        "length": 8
+                    }
+                ],
+                "dataset": "Train"
+            }
+        ]
+    }
+}

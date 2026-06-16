@@ -1,0 +1,4 @@
+AZURE_LANGUAGE_ENDPOINT=https://your-resource.cognitiveservices.azure.com/
+AZURE_LANGUAGE_KEY=your_api_key_here
+CLU_PROJECT_NAME=TravelBookingCLU
+CLU_DEPLOYMENT_NAME=production
